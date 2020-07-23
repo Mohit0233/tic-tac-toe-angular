@@ -1,0 +1,22 @@
+
+<div style="display: flex; flex-grow: 2;padding: 20px 0 20px 0">
+    <div style="display:flex;justify-content: center; width: 100%;">
+        <button  aria-label="New Game" mat-raised-button color="primary" (click)="newGame();flag = false">New Game</button>
+    </div>
+    <div style="display:flex;justify-content: center; width: 100%;">
+        <button  mat-raised-button aria-label="value" [color]="value == 'O' ? 'accent' : 'primary'" (click)="changeValue()" [disabled]="flag">{{ value }} plays first</button>
+    </div>
+</div>
+
+    <main *ngIf="d==false;else el" >
+        <app-box  *ngFor="let box of boxes; let i = index" 
+        [value]="box"
+        [dis]="d" 
+        (click)="makeMove(i); flag = true">
+        </app-box>
+    </main>
+    <ng-template #el >
+        <div style="width:600px;height: 606px;display: flex;align-items: center;justify-content: center;">
+            <p>{{ winner }} WON </p>
+        </div>
+    </ng-template>
