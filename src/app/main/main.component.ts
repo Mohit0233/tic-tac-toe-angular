@@ -25,6 +25,7 @@ export class MainComponent implements OnInit {
     this.xTurn = true;
     this.winner = null;
     this.d = false;
+    this.count = 0;
   }
 
   changeValue() {
@@ -48,7 +49,6 @@ export class MainComponent implements OnInit {
       }
     this.count = this.count + 1;
     if (this.count == 9 && this.winner == null) {
-      console.log("9")
       this.winner = 'Nobody';
       this.d = true;
     }
