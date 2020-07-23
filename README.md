@@ -1,3 +1,5 @@
+![Output Shown By Img](output.jpg?raw=true "Tic Tac Toe")
+
 # TicTacToeAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.3.
